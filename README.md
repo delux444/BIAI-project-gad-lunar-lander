@@ -4,8 +4,6 @@ A **neuroevolution** project that trains an autonomous flight pilot for OpenAI G
 
 The pilot is trained for a **Touch-and-Go** mission: descend, touch down between the flags, then ascend and maintain stable flight.
 
-https://github.com/user-attachments/assets/6a4abc2a-7557-4b4c-923f-c83dc36a3c88
-
 ---
 
 ## Table of Contents
