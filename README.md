@@ -25,7 +25,7 @@ The pilot is trained for a **Touch-and-Go** mission: descend, touch down between
 **1. Clone the repository**
 ```bash
 git clone https://github.com/<your-username>/BIAI-project-gad-lunar-lander.git
-cd lunar-lander-neuroevolution
+cd lunar-lander-neuroevolution (cd [project directory])
 ```
 
 **2. Create a virtual environment**
@@ -34,9 +34,11 @@ cd lunar-lander-neuroevolution
 python3 -m venv venv
 source venv/bin/activate
 
-# Windows
+# Windows (PowerShell)
 python -m venv venv
-venv\Scripts\activate
+cd venv\bin
+.\Activate.ps1
+cd [project directory]
 ```
 
 **3. Install dependencies**
