@@ -1,8 +1,8 @@
-# Lunar Lander: Touch-and-Go Neuroevolution
+# Lunar Lander: Perfect landing Neuroevolution
 
 A **neuroevolution** project that trains an autonomous flight pilot for OpenAI Gymnasium's `LunarLander-v3` environment using a **Genetic Algorithm (GA)**. Instead of gradient-based reinforcement learning, the pilot's neural network weights are evolved directly — no backpropagation, no policy gradients, just survival of the fittest.
 
-The pilot is trained for a **Touch-and-Go** mission: descend, touch down between the flags, then ascend and maintain stable flight.
+The pilot is trained for a **Perfect landing** mission: descend, touch down between the flags without crash.
 
 ---
 
@@ -263,13 +263,13 @@ The environment resets with slightly randomised initial conditions (spawn positi
 
 ### Custom reward shaping
 
-Beyond the environment's built-in rewards, two modifications guide the pilot toward the Touch-and-Go mission:
+Beyond the environment's built-in rewards, two modifications guide the pilot toward the Perfect landing mission:
 
 **Touchdown Bonus (+100)**
 Fires exactly once, the first time either leg sensor reads `1.0`. This creates a strong selective pressure toward actually touching the ground — without it, hovering indefinitely can score better than landing.
 
 **Ascent Reward (+2/frame)**
-Once the pilot has touched down, every frame spent above altitude `0.2` earns a small bonus. This encourages the pilot to take off again after landing rather than shutting down engines and staying on the ground.
+Once the pilot has touched down, every frame spent above altitude `0.2` earns a small bonus.
 
 > Note: the `landed_once` flag ensures the touchdown bonus only fires once per episode and the ascent reward only activates after the first contact.
 
